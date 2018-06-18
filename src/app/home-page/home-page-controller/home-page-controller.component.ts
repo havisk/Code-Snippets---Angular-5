@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Languages} from '../models/temp-languages.enum';
+import {Snippet} from '../models/snippet';
 
 @Component({
   selector: 'app-home-page-controller',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageControllerComponent implements OnInit {
 
-  constructor() { }
+  snippets = [
+    new Snippet('my music', 'run man', 'let king=true;', Languages.typscript),
+    new Snippet('my music', 'run man', 'let king=true;', Languages.typscript),
+    new Snippet('my music', 'run man', 'let king=true;', Languages.typscript),
+    new Snippet('my music', 'run man', 'let king=true;', Languages.typscript),
+    new Snippet('my music', 'run man', 'let king=true;', Languages.typscript),
+    new Snippet('my music', 'run man', 'let king=true;', Languages.typscript),
+    new Snippet('my music', 'run man', 'let king=true;', Languages.typscript),
+  ];
+
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
-
 }
+
+
